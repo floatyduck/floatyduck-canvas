@@ -1,23 +1,27 @@
 FDScroll.prototype = new FDElement();
 
-function FDScroll(width, height) {
-    this.width = width;
-    this.height = height;
+function FDScroll() {
+    this.width = 300;
+    this.height = 600;
     this.x = 0;
-
 
     this.background = new Image();
     this.background.src = 'img/bg.png';     
     
     this.scale = 1;
-    this.scaledWidth = width;
-    this.scaledHeight = height;
+    this.scaledWidth = this.width;
+    this.scaledHeight = this.height;
+}
+
+FDScroll.prototype.setCanvasSize = function(width, height) {
+    this.width = width;
+    this.height = height;
+
     this.background.onload = function() {
         this.scale = this.height / this.background.height;
         this.scaledWidth = this.background.width * this.scale;
         this.scaledHeight = this.background.height * this.scale;
     }.bind(this);
-
 }
 
 FDScroll.prototype.update = function() {

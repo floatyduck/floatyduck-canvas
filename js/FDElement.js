@@ -2,6 +2,10 @@ function FDElement() {
     
 }
 
+FDElement.prototype.init = function() {
+    
+}
+
 FDElement.prototype.update = function() {
     
 }
