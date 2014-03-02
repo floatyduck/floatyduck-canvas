@@ -21,6 +21,9 @@ function FDEngine(canvas) {
     this.Duck = new FDDuck();
     this.elems.push(this.Duck);
 
+    this.ObstacleManager = new FDObstacleManager();
+    this.elems.push(this.ObstacleManager);
+
     switch(this.PLATFORM) {
         case 'phone': this.Input = new FDTouchScreen(); break;
         default: this.Input = new FDKeyboard();
@@ -51,6 +54,9 @@ FDEngine.prototype.init = function() {
     var centerX = this.canvas.width / 2;
     var centerY = this.canvas.height / 2;
     this.Duck.setPos(centerX, centerY);
+
+    this.ObstacleManager.setCanvasSize(this.canvas.width, this.canvas.height);
+    this.ObstacleManager.setScale(this.scale);
 
     this.Input.onTap(function() {
         this.Duck.flap();

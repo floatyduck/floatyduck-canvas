@@ -1,6 +1,7 @@
 FDDuck.prototype = new FDElement();
 
 function FDDuck() {
+    this.IMAGE = 'img/duck.png';
     this.LIMIT_Y = 23;
     this.BOUYANCY = -0.4;
     this.FLAP_POWER = 8;
@@ -14,7 +15,7 @@ function FDDuck() {
     this.velocity = 0;
 
     this.img = new Image();
-    this.img.src = 'img/duck.png';
+    this.img.src = this.IMAGE;
     this.img.onload = function() {
         this.scaledWidth = this.img.width * this.scale;
         this.scaledHeight = this.img.height * this.scale;

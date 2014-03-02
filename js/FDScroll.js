@@ -1,12 +1,14 @@
 FDScroll.prototype = new FDElement();
 
 function FDScroll() {
+    this.IMAGE = 'img/bg.png';
+
     this.width = 300;
     this.height = 600;
     this.x = 0;
 
     this.background = new Image();
-    this.background.src = 'img/bg.png';     
+    this.background.src = this.IMAGE;     
     
     this.scale = 1;
     this.scaledWidth = this.width;
