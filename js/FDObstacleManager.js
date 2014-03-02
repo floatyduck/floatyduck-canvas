@@ -1,7 +1,7 @@
 FDObstacleManager.prototype = new FDElement();
 
 function FDObstacleManager() {
-    this.OBSTACLE_RATE = 240; // Every four seconds
+    this.OBSTACLE_RATE = 180; 
     this.GAP_SIZE = 130;
 
     this.scale = 1;

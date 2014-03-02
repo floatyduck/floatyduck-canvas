@@ -27,7 +27,7 @@ FDScroll.prototype.setCanvasSize = function(width, height) {
 }
 
 FDScroll.prototype.update = function() {
-    this.x--;
+    this.x -= this.scale;
 
     if(Math.abs(this.x) > this.scaledWidth) {
         this.x = 0;

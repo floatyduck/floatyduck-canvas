@@ -32,7 +32,7 @@ FDObstacle.prototype.setHeight = function(height) {
 }
 
 FDObstacle.prototype.update = function() {
-    this.x--;
+    this.x -= this.scale;
 }
 
 FDObstacle.prototype.render = function(ctx) {
