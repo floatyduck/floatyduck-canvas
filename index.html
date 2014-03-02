@@ -1,0 +1,18 @@
+
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/FDEngine.js"></script>
+<script src="js/FDInput.js"></script>
+<script src="js/FDKeyboard.js"></script>
+<script src="js/FDTouchScreen.js"></script>
+<script src="js/FDElement.js"></script>
+<script src="js/FDScroll.js"></script>
+<script src="js/FDDuck.js"></script>
+
+<script>
+window.onload = function() {
+    var canvas = document.createElement('canvas');
+    document.body.appendChild(canvas);
+    var engine = new FDEngine(canvas);
+    engine.run();
+}
+</script>   
