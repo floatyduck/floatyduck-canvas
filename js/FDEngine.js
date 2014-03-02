@@ -76,7 +76,7 @@ FDEngine.prototype.render = function() {
     }.bind(this));
 }
 
-/**** Helper Function ****/
+/**** Helper Functions ****/
 // shim layer with setTimeout fallback
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
